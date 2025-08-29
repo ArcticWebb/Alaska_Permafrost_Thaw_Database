@@ -1,11 +1,11 @@
-name: Build Geo files from CSV
+name: Create GeoJSON and GeoPackage
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'Main_Dataset/Alaska_Permafrost_Thaw_Database.csv'
-      - 'Scripts/Create_GeoJSON.R'
+      - 'Main_Dataset/**/*.csv'
+      - 'Scripts/GeoJSON_File_Creation.R'
       - '.github/workflows/create-GeoJSON.yml'
   workflow_dispatch:
 
@@ -33,20 +33,18 @@ jobs:
             readr
             dplyr
             sf
-            janitor
 
-      - name: Build GeoJSON & GeoPackage
-        run: Rscript scripts/make_geo.R
+      - name: Run R script to create GeoJSON and GPKG
+        run: Rscript Scripts/GeoJSON_File_Creation.R
 
       - name: Commit artifacts
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add outputs/database.geojson outputs/database.gpkg outputs/rows_dropped_for_bad_coords.csv || true
+          git add outputs/Alaska_Permafrost_Thaw_Database.geojson outputs/Alaska_Permafrost_Thaw_Database.gpkg outputs/rows_dropped_for_bad_coords.csv || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Auto-build geo files from CSV [skip ci]"
+            git commit -m "Auto-build GeoJSON and GPKG from CSV [skip ci]"
             git push
           fi
-

@@ -1,55 +1,46 @@
-# scripts/make_geo.R
-# Converts data/database.csv -> outputs/database.geojson + outputs/database.gpkg
+# Scripts/GeoJSON_File_Creation.R
+# Converts Main_Dataset/Alaska_Permafrost_Thaw_Database.csv 
+# -> outputs/Alaska_Permafrost_Thaw_Database.geojson + .gpkg
 
 library(readr)
 library(dplyr)
 library(sf)
-library(janitor)
 
 csv_path <- "Main_Dataset/Alaska_Permafrost_Thaw_Database.csv"
 out_dir <- "outputs"
-geojson_path <- file.path(out_dir, "Alaska_Permafrost_Thaw_Datbase.geojson")
+geojson_path <- file.path(out_dir, "Alaska_Permafrost_Thaw_Database.geojson")
 gpkg_path <- file.path(out_dir, "Alaska_Permafrost_Thaw_Database.gpkg")
-layer_name <- "database_points"
+layer_name <- "permafrost_thaw_points"
 
-# Read and clean names
-df <- readr::read_csv(csv_path, show_col_types = FALSE) |> janitor::clean_names()
+# Read CSV (your column names are already standardized)
+df <- readr::read_csv(csv_path, show_col_types = FALSE)
 
-# Define coordinates
-lon_candidates <- c("Longitude")
-lat_candidates <- c("Latitude")
-
-find_col <- function(cands, label) {
-  i <- which(names(df) %in% cands)
-  if (length(i) == 0) stop(paste("Couldn't find", label, "column. Looked for:", paste(cands, collapse=", ")))
-  names(df)[i[1]]
-}
-lon_col <- find_col(lon_candidates, "Longitude")
-lat_col <- find_col(lat_candidates, "Latitude")
-
-# Coerce to numeric
-df <- df |>
+# Ensure Lat/Lon are numeric
+df <- df %>%
   mutate(
-    !!lon_col := as.numeric(.data[[lon_col]]),
-    !!lat_col := as.numeric(.data[[lat_col]])
+    Latitude = as.numeric(Latitude),
+    Longitude = as.numeric(Longitude)
   )
 
-# Basic QC: drop rows with missing/invalid coords (and save a report)
-bad <- df |> filter(
-  is.na(.data[[lon_col]]) | is.na(.data[[lat_col]]) |
-    .data[[lon_col]] < -180 | .data[[lon_col]] > 180 |
-    .data[[lat_col]] < -90  | .data[[lat_col]] > 90
+# Basic QC: drop bad coordinates
+bad <- df %>% filter(
+  is.na(Longitude) | is.na(Latitude) |
+    Longitude < -180 | Longitude > 180 |
+    Latitude < -90 | Latitude > 90
 )
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
-if (nrow(bad) > 0) readr::write_csv(bad, file.path(out_dir, "rows_dropped_for_bad_coords.csv"))
+if (nrow(bad) > 0) {
+  readr::write_csv(bad, file.path(out_dir, "rows_dropped_for_bad_coords.csv"))
+}
 good <- dplyr::anti_join(df, bad, by = names(df))
 
-# Make sf (WGS84 / EPSG:4326) and write outputs
-gdf <- st_as_sf(good, coords = c(lon_col, lat_col), crs = 4326, remove = FALSE)
+# Convert to sf object
+gdf <- st_as_sf(good, coords = c("Longitude", "Latitude"), crs = 4326, remove = FALSE)
 
+# Delete old files before writing
 if (file.exists(geojson_path)) file.remove(geojson_path)
 if (file.exists(gpkg_path)) file.remove(gpkg_path)
 
+# Write outputs
 st_write(gdf, geojson_path, delete_dsn = TRUE, quiet = TRUE)
 st_write(gdf, gpkg_path, layer = layer_name, delete_dsn = TRUE, quiet = TRUE)
-

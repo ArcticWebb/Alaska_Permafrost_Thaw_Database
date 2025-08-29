@@ -10,7 +10,7 @@ when applicable, feature type as reported by the source, feature category (featu
 ## This repository hosts:
 **CSV file**: Tabular dataset of the Alaska permafrost thaw database
 
-**Shapefile**: Geospatial dataset with necessary files (.dbf, .prj, .shp, .shx)
+**Zip folder**: Zipped folder containing the geospatial dataset with necessary files (.dbf, .prj, .shp, .shx)
 
 **Template CSV**: Example file for contributing new thaw points
 

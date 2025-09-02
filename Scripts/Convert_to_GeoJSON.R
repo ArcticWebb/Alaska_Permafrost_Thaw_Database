@@ -1,22 +1,41 @@
-# Convert_to_GeoJSON.R
-# Converts Alaska Permafrost Thaw Database from CSV to GeoJSON file
+#---------------------------------------------------------------------------------------------
+# This R script converts the Alaska Permafrost Thaw Database from a CSV file to 
+# a GeoJSON file that can be used for spatial analyses
+#---------------------------------------------------------------------------------------------
 
-# Load required package
+#---------------------------------------------------------------------------------------------
+# Step 1: Download the Alaska_Permafrost_Thaw_Database_v1.0.0-alpha.csv file (or other version)
+# to your local computer. Make note of which version you've downloaded.
+#---------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------
+# Step 2: Load required package
 if(!require(sf)) install.packages("sf")
 library(sf)
+#---------------------------------------------------------------------------------------------
 
-# Define file paths
-input_csv <- "ArcticWebb/Main_Dataset/Alaska_Permafrost_Thaw_Database.csv"
-output_geojson <- "ArcticWebb/Main_Dataset/Alaska_Permafrost_Thaw_Database.geojson"
 
-# Read the CSV
+#---------------------------------------------------------------------------------------------
+# Step 3: Define file paths
+input_csv <- ".../Alaska_Permafrost_Thaw_Database_v1.0.0-alpha.csv" ## Set file path and change file name to correct version
+output_geojson <- ".../Alaska_Permafrost_Thaw_Database_v1.0.0-alpha.geojson"
+#---------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------
+# Step 4: Read the CSV
 thaw_data <- read.csv(input_csv, stringsAsFactors = FALSE)
+#---------------------------------------------------------------------------------------------
 
-# Convert to sf object using Latitude and Longitude
+
+#---------------------------------------------------------------------------------------------
+# Step 5: Convert to sf object using Latitude and Longitude in WGS84
 thaw_sf <- st_as_sf(thaw_data, coords = c("Longitude", "Latitude"), crs = 4326)
+#---------------------------------------------------------------------------------------------
 
-# Write to GeoJSON
+
+#---------------------------------------------------------------------------------------------
+# Step 5: Write to GeoJSON
 st_write(thaw_sf, output_geojson, driver = "GeoJSON", delete_dsn = TRUE)
-
-cat("GeoJSON file created at:", output_geojson, "\n")
-
+#---------------------------------------------------------------------------------------------

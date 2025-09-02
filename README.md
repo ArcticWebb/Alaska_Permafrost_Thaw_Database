@@ -31,8 +31,9 @@ The database includes 19,536 points compiled from published literature, geospati
 
 ---
 ## How to Use
-- Download the Alaska Permafrost Thaw Database as a CSV file: `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`.
-- If desired, use the embedded R script to convert the CSV file: `Scripts/Convert_to_GeoJSON.R`
+- Download the Alaska Permafrost Thaw Database as a CSV file. Example: `Main_Dataset/v1.0.0-alpha/Alaska_Permafrost_Thaw_Database_v1.0.0-alpha.csv`.
+  - Make sure to select the most recent version of the database.
+- If you want to convert the tabular database to a GeoJSON file for spatial analyses, download the R script: `Scripts/Convert_to_GeoJSON.R` and run on your local computer. 
 - See citation information below
 ---
 
@@ -48,7 +49,7 @@ We welcome contributions of new abrupt or non-abrupt permafrost thaw locations a
 3. **Submit a pull request** from your branch to the `main` branch of this repository.
 4. Once approved, your data will be merged into the main database.
 
-See the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for detailed instructions and data standards.
+See the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more detailed instructions.
 
 ---
 

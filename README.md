@@ -7,7 +7,6 @@ The database includes 19,536 points compiled from published literature, geospati
 
 ## This repository hosts:
 - **CSV file:** `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv` — the main tabular dataset.
-- **Template CSV:** `Main_Dataset/Template_Alaska_Permafrost_Thaw_Database.csv` — example file for contributing new points.
 - **R Script** `Scripts/Convert_to_GeoJSON.R` - R script for converting the database from a CSV file to a GeoJSON file.
 - **README.md & LICENSE** — usage instructions and license information.  
 ---
@@ -38,10 +37,18 @@ The database includes 19,536 points compiled from published literature, geospati
 ---
 
 ## How to Contribute
-Contributors should **only edit the CSV file**:  
-`Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`
 
-See `CONTRIBUTING.md` file for more information on how to contribute locations.
+We welcome contributions of new actively thawing or stable permafrost locations. At this time, contributions are **only accepted via pull requests**.
+
+1. **Fork this repository** and create a new branch in your fork.
+2. **Add new data** to your own copy of:  
+   `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`  
+   - Follow the column structure exactly as outlined in this README.  
+   - Do **not** remove or edit existing rows.
+3. **Submit a pull request** from your branch to the `main` branch of this repository.
+4. Once approved, your data will be merged into the main database.
+
+See the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more detailed instructions.
 
 ---
 

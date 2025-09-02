@@ -1,10 +1,20 @@
-## How to Contribute:
-1. **Fork** this repository (makes your own copy so you can edit).
-2. **Create a new branch** in your fork for your contribution.
-3. **Open the CSV template** and add your thaw locations following the data structure below.
-4. **Commit** your changes with a clear message stating the source of the new thaw locations.
-5. **Open a Pull Request** back to this repo.
-6. Our checks run automatically; a maintainer will review 
+## How to Contribute New Data:
+1. **Fork** this repository to your own GitHub account.
+3. **Create a new branch** in your fork for your contribution.
+4. **Add your new thaw locations** to the `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv` file.
+    - Please ensure your data follows the existing data structure below.
+    - Refer to the table below for detailed descriptions of each column.
+5. **Commit** your changes with a clear message (e.g. "New thermokarst lakes on North Slope by Merritt Turetsky").
+6. **Push the branch** to your fork.
+7. **Open a Pull Request (PR)** to the main repository. 
+---
+
+## Pull Request Review
+
+- All pull requests will be reviewed to ensure they follow the data structure and formatting rules.  
+- Minor formatting issues may be corrected during the review process.  
+- Once approved, your contribution will be merged into the main database.  
+---
 
 ## Data Structure and Metadata Formatting Summary Example:
 

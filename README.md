@@ -45,7 +45,7 @@ We welcome contributions of new abrupt or non-abrupt permafrost thaw locations a
 2. **Add new data** to your own copy of:  
    `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`  
    - Follow the column structure exactly as outlined in this README.  
-   - Do **not** remove or edit existing rows.
+   - If you remove or edit existing removes, make a note of that in your pull request.
 3. **Submit a pull request** from your branch to the `main` branch of this repository.
 4. Once approved, your data will be merged into the main database.
 

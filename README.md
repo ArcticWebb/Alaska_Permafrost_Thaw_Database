@@ -7,10 +7,8 @@ The database includes 19,536 points compiled from published literature, geospati
 
 ## This repository hosts:
 - **CSV file:** `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv` — the main tabular dataset.
-- - **Template CSV:** `Main_Dataset/Template_Alaska_Permafrost_Thaw_Database.csv` — example file for contributing new points.  
-- **GeoJSON:** `outputs/Alaska_Permafrost_Thaw_Database.geojson` — viewable directly on GitHub.  
-- **GeoPackage (.gpkg):** `outputs/Alaska_Permafrost_Thaw_Database.gpkg` — for GIS software (ArcGIS/QGIS).  
-- **Scripts:** `Scripts/GeoJSON_File_Creation.R` — script that generates the GeoJSON and GPKG from the CSV.  
+- **Template CSV:** `Main_Dataset/Template_Alaska_Permafrost_Thaw_Database.csv` — example file for contributing new points.
+- **R Script** `Scripts/Convert_to_GeoJSON.R` - R script for converting the database from a CSV file to a GeoJSON file.
 - **README.md & LICENSE** — usage instructions and license information.  
 ---
 
@@ -34,31 +32,22 @@ The database includes 19,536 points compiled from published literature, geospati
 
 ---
 ## How to Use
-- Download the CSV or GeoJSON for tabular or spatial analyses.  
-- View the GeoJSON directly on GitHub to quickly explore thaw locations.  
-- Use the GPKG in ArcGIS/QGIS for GIS-based analyses.  
-- Citation (Zenodo DOI pending):  
-  Webb, H. et al. (2025). *A Comprehensive Database of Thawing and Stable Permafrost Locations Across Alaska*. Zenodo. https://doi.org/XXXX/zenodo.XXXXX
-
-
+- Download the Alaska Permafrost Thaw Database as a CSV file: `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`.
+- If desired, use the embedded R script to convert the CSV file: `Scripts/Convert_to_GeoJSON.R`
+- See citation information below
 ---
 
 ## How to Contribute
 Contributors should **only edit the CSV file**:  
 `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`
 
-1. Add new points as rows in the CSV.  
-2. Latitude/Longitude must be in decimal degrees (EPSG:4326).  
-3. Check column values follow the allowed categories (see `CONTRIBUTING.md` for detailed rules).  
-4. Submit a Pull Request. 
+See `CONTRIBUTING.md` file for more information on how to contribute locations.
 
-> After merging, a GitHub Actions workflow automatically regenerates the GeoJSON and GeoPackage.
 ---
 
 ## Citation
 
-Webb, H. et al. (2025). *A Comprehensive Database of Thawing and Stable Permafrost Locations Across Alaska*. Zenodo. https://doi.org/XXXX/zenodo.XXXXX
-
+Webb, H., Pierce, E., Douglas, T. A., Overeem, I., & Turetsky, M. R. (2025). Initial release of the Alaska Permafrost Thaw Database (v1.0.0-alpha). Zenodo. https://doi.org/10.5281/zenodo.16996416
 
 ---
 

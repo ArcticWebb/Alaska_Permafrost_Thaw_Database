@@ -4,6 +4,7 @@
 4. **Add your new thaw locations** to the `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv` file.
     - Please ensure your data follows the existing data structure below.
     - Refer to the table below for detailed descriptions of each column.
+    - If you have multiple entries for a column (e.g. multiple types of thaw features, multiple satellites used, etc.) please separate entries with a semi-colon.
 5. **Commit** your changes with a clear message (e.g. "New thermokarst lakes on North Slope by Merritt Turetsky").
 6. **Push the branch** to your fork.
 7. **Open a Pull Request (PR)** to the main repository. 
@@ -29,6 +30,6 @@
 | `FeatureType`       |    Yes   | As reported by source                               | Types include retrogressive thaw slumps, thermokarst lakes, collapse-scar bog, etc.                                      | Collapse-scar bog; Thermokarst water track
 | `FeatureCategory`   |     Yes  | Generalized category                                | Categorize `Feature Type` as one of the following: Active layer detachment, Retrogressive thaw slump, Thaw pond, Thermoerosional gully, Thermokarst, Thermokarst lake, Wildfire-induced thaw, or Thermokarst wetland | Thermokarst wetland; Thaw pond, Thermokarst
 | `ThawType`          |    Yes   | Abrupt / Non-abrupt                                  | The type of thaw. The features are classified as either abrupt or non-abrupt thaw according to the framework outlined in [Webb et al. (2025)](https://doi.org/10.1007/s40641-025-00204-3)                  | Abrupt; Non-abrupt
-| `Imagery`           |   Yes, if remotely sensed data    | Satellite or sensor name                            | Remote sensing instrument used, if applicable                    | Landsat; Planet                      
+| `Imagery`           |   Yes, if remotely sensed data    | Satellite or sensor name                            | Remote sensing instrument used, if applicable                   | Landsat; Planet                      
 | `ImageryDate`       |    Yes, if remotely sensed data    | Year(s) of imagery                                  | Years of imagery used                                                                                                     | 1995 to 2005; 2025
 | `ImageryResolution_meters`| Yes, if remotely sensed data | Spatial resolution in meters                        | Resolution of imagery used                                                                                                 | 2; 30

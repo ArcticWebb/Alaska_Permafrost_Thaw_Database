@@ -59,7 +59,7 @@ See the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more detailed instructions
 
 ## Citation
 
-Webb, H., Pierce, E., Douglas, T. A., Overeem, I., & Turetsky, M. R. (2025). Initial release of the Alaska Permafrost Thaw Database (v1.0.0-alpha). Zenodo. https://doi.org/10.5281/zenodo.16996416
+Hailey Webb, Pierce, E., Douglas, T., Overeem, I., & Turetsky, M. (2025). The Alaska Permafrost Thaw Database (v1.0.0). Zenodo. https://doi.org/10.5281/ZENODO.16996415
 
 ---
 

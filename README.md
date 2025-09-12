@@ -6,9 +6,11 @@ The database includes 19,536 points compiled from published literature, geospati
 
 
 ## This repository hosts:
-- **CSV file:** `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv` — the main tabular dataset.
+- **Main Dataset:** `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv` — the main tabular dataset.
+- **Dataset with additional topography data:** `TopographyData/Alaska_Permafrost_Thaw_Database_v1.0.0_Topography_Data.csv` - the main tabular dataset with added topography data. 
 - **R Script** `Scripts/Convert_to_GeoJSON.R` - R script for converting the database from a CSV file to a GeoJSON file.
-- **README.md & LICENSE** — usage instructions and license information.  
+- **README.md & LICENSE** — usage instructions and license information.
+- **CONTRIBUTING.md** - instructions for how to contribute to the database. 
 ---
 
 

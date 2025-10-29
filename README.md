@@ -2,7 +2,7 @@
 
 
 The Alaska Permafrost Thaw Database is an open-access, georeferenced database of abrupt and non-abrupt permafrost thaw locations across Alaska. 
-The database includes 19,536 points compiled from published literature, geospatial databases, field campaigns, and photo-interpreted sites of landscape change.
+Version 1.0.0 of the database includes 19,540 points compiled from published literature, geospatial databases, field campaigns, and photo-interpreted sites of landscape change.
 
 
 ## This repository hosts:

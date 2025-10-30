@@ -9,7 +9,7 @@ Version 2.0.0 of the database includes 19,540 points compiled from published lit
 - **Main Dataset:** `Main_Dataset/[select version]/Alaska_Permafrost_Thaw_Database_[insert version].csv` — the main tabular dataset.
 - **Dataset with additional topography data:** `Main_Dataset/Alaska_Permafrost_Thaw_Database_TopographicVariables_[insert version].csv` - the main tabular dataset with added topography data. 
 - **R Scripts**
-     - `Scripts/Convert_to_GeoJSON.R` - R script for converting the database from a CSV file to a GeoJSON file.
+     - `Scripts/Convert_to_GeoJSON_GeoPackage.R` - R script for converting the database from a CSV file to GeoJSON and GeoPackage.
      - `Scripts/GEE_TopographicVariableExtractionScript.js` - Google Earth Engine Script for extracting topographic variables at each thaw feature.
 - **README.md & LICENSE** — usage instructions and license information.
 - **CONTRIBUTING.md** - instructions for how to contribute to the database. 

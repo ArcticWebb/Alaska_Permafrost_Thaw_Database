@@ -39,3 +39,9 @@ thaw_sf <- st_as_sf(thaw_data, coords = c("Longitude", "Latitude"), crs = 4326)
 # Step 5: Write to GeoJSON
 st_write(thaw_sf, output_geojson, driver = "GeoJSON", delete_dsn = TRUE)
 #---------------------------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------------------------
+# Step 6: Write to GeoPackage
+st_write(thaw_sf, output_geopackage, layer = "thaw_points", delete_dsn = TRUE)
+#---------------------------------------------------------------------------------------------
+

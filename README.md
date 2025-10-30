@@ -2,12 +2,12 @@
 
 
 The Alaska Permafrost Thaw Database is an open-access, georeferenced database of abrupt and non-abrupt permafrost thaw locations across Alaska. 
-Version 1.0.0 of the database includes 19,540 points compiled from published literature, geospatial databases, field campaigns, and photo-interpreted sites of landscape change.
+Version 2.0.0 of the database includes 19,540 points compiled from published literature, geospatial databases, field campaigns, and photo-interpreted sites of landscape change.
 
 
 ## This repository hosts:
-- **Main Dataset:** `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv` — the main tabular dataset.
-- **Dataset with additional topography data:** `TopographyData/Alaska_Permafrost_Thaw_Database_v1.0.0_Topography_Data.csv` - the main tabular dataset with added topography data. 
+- **Main Dataset:** `Main_Dataset/[select version]/Alaska_Permafrost_Thaw_Database_[insert version].csv` — the main tabular dataset.
+- **Dataset with additional topography data:** `Main_Dataset/Alaska_Permafrost_Thaw_Database_TopographicVariables_[insert version].csv` - the main tabular dataset with added topography data. 
 - **R Scripts**
      - `Scripts/Convert_to_GeoJSON.R` - R script for converting the database from a CSV file to a GeoJSON file.
      - `Scripts/GEE_TopographicVariableExtractionScript.js` - Google Earth Engine Script for extracting topographic variables at each thaw feature.
@@ -47,7 +47,7 @@ We welcome contributions of new abrupt or non-abrupt permafrost thaw locations a
 
 1. **Fork this repository** and create a new branch in your fork.
 2. **Add new data** to your own copy of:  
-   `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`  
+   `Main_Dataset/Alaska_Permafrost_Thaw_Database_[insert version].csv`  
    - Follow the column structure exactly as outlined in this README.  
    - If you remove or edit existing rows, make a note of that in your pull request.
 3. **Submit a pull request** from your branch to the `main` branch of this repository.
@@ -59,7 +59,7 @@ See the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more detailed instructions
 
 ## Citation
 
-Hailey Webb, Pierce, E., Douglas, T., Overeem, I., & Turetsky, M. (2025). The Alaska Permafrost Thaw Database (v1.0.0). Zenodo. https://doi.org/10.5281/ZENODO.16996415
+Hailey Webb, Pierce, E., Douglas, T., Overeem, I., & Turetsky, M. (2025). The Alaska Permafrost Thaw Database [insert version]. Zenodo. https://doi.org/10.5281/ZENODO.16996415
 
 ---
 

@@ -26,6 +26,6 @@ This repository contains two primary files associated with **The Alaska Permafro
 
 If you use this dataset, please cite as follows:
 
-> Hailey Webb, Pierce, E., Douglas, T., Overeem, I., & Turetsky, M. (2025). The Alaska Permafrost Thaw Database (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.17103308(https://doi.org/10.5281/zenodo.17103308)
+> Webb, H., Pierce, E., Abbott, B. A., Bowden, W. B., Chen, Y., Chen, Y., Douglas, T. A., Eklof, J. F., Euskirchen, E., Jones, M.C., Langer, M., Myers-Smith, I. H., Overeem, I., Strauss, J., Walter Anthony, K., Wang, K., Whitley, M. A., and Turetsky, M. (2025). The Alaska Permafrost Thaw Database (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.17103308(https://doi.org/10.5281/zenodo.17103308)
 
 

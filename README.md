@@ -2,12 +2,13 @@
 
 
 The Alaska Permafrost Thaw Database is an open-access, georeferenced database of abrupt and non-abrupt permafrost thaw locations across Alaska. 
-Version 2.0.0 of the database includes 19,540 points compiled from published literature, geospatial databases, field campaigns, and photo-interpreted sites of landscape change.
+The most recent version, version 2.0.0, of the database includes 19,540 points compiled from published literature, geospatial databases, field campaigns, and photo-interpreted sites of landscape change.
 
 
 ## This repository hosts:
-- **Main Dataset:** `Main_Dataset/[select version]/Alaska_Permafrost_Thaw_Database_[insert version].csv` — the main tabular dataset.
-- **Dataset with additional topography data:** `Main_Dataset/Alaska_Permafrost_Thaw_Database_TopographicVariables_[insert version].csv` - the main tabular dataset with added topography data. 
+- **Main Dataset:** `Main_Dataset/[insert version]/CSV/Alaska_Permafrost_Thaw_Database_[insert version].csv` — the main tabular dataset.
+- **Dataset with additional topography data:** `Main_Dataset/[insert version]/CSV/Alaska_Permafrost_Thaw_Database_TopographicVariables_[insert version].csv` - the main tabular dataset with added topography data.
+- **Geospatial Files** `Main_Dataset/[insert version]/Geospatial_Files/Alaska_Permafrost_Thaw_Database_v2.0.0.geojson` and `Main_Dataset/[insert version]/Geospatial_Files/Alaska_Permafrost_Thaw_Database_v2.0.0.gpkg`
 - **R Scripts**
      - `Scripts/Convert_to_GeoJSON_GeoPackage.R` - R script for converting the database from a CSV file to GeoJSON and GeoPackage.
      - `Scripts/GEE_TopographicVariableExtractionScript.js` - Google Earth Engine Script for extracting topographic variables at each thaw feature.
@@ -35,7 +36,7 @@ Version 2.0.0 of the database includes 19,540 points compiled from published lit
 
 ---
 ## How to Use
-- Download the Alaska Permafrost Thaw Database as a CSV file. Example: `Main_Dataset/v1.0.0-alpha/Alaska_Permafrost_Thaw_Database_v1.0.0-alpha.csv`.
+- Download the Alaska Permafrost Thaw Database as a CSV file. Example: `Main_Dataset/v2.0.0/CSV/Alaska_Permafrost_Thaw_Database_v2.0.0.csv`.
   - Make sure to select the most recent version of the database.
 - If you want to convert the tabular database to a GeoJSON file for spatial analyses, download the R script: `Scripts/Convert_to_GeoJSON.R` and run on your local computer. 
 - See citation information below
@@ -47,7 +48,7 @@ We welcome contributions of new abrupt or non-abrupt permafrost thaw locations a
 
 1. **Fork this repository** and create a new branch in your fork.
 2. **Add new data** to your own copy of:  
-   `Main_Dataset/Alaska_Permafrost_Thaw_Database_[insert version].csv`  
+   `Main_Dataset/[insert version]/CSV/Alaska_Permafrost_Thaw_Database_[insert version].csv`  
    - Follow the column structure exactly as outlined in this README.  
    - If you remove or edit existing rows, make a note of that in your pull request.
 3. **Submit a pull request** from your branch to the `main` branch of this repository.
@@ -59,7 +60,7 @@ See the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more detailed instructions
 
 ## Citation
 
-Hailey Webb, Pierce, E., Douglas, T., Overeem, I., & Turetsky, M. (2025). The Alaska Permafrost Thaw Database [insert version]. Zenodo. https://doi.org/10.5281/ZENODO.16996415
+Webb, H., Pierce, E., Abbott, B. A., Bowden, W. B., Chen, Y., Chen, Y., Douglas, T. A., Eklof, J. F., Euskirchen, E., Jones, M. C., Langer, M., Myers-Smith, I. H., Overeem, I., Strauss, J., Walter Anthony, K., Wang, K., Whitley, M. A., & Turetsky, M. (2025). The Alaska Permafrost Thaw Database [insert version]. Zenodo. https://doi.org/10.5281/ZENODO.16996415
 
 ---
 

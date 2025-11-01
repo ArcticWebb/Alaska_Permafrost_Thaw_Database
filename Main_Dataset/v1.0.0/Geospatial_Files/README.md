@@ -15,4 +15,10 @@ This repository contains two geospatial files associated with **The Alaska Perma
    - GeoPackage format of the thaw database (version 1.0.0)  
    - CRS: WGS84 (EPSG:4326)  
 
+---
 
+## Citation
+
+If you use this dataset, please cite as follows:
+
+> Webb, H., Pierce, E., Abbott, B. A., Bowden, W. B., Chen, Y., Chen, Y., Douglas, T.A., Eklof, J. F., Euskirchen, E. S., Jones, M. C., Langer, M., Myers-Smith, I. H., Overeem, I., Strauss, J., Walter Anthony, K., Wang, K., Whitley, M. A., & Turetsky, M. R. (2025). Initial Release of The Alaska Permafrost Thaw Database (v1.0.0) (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.17103308

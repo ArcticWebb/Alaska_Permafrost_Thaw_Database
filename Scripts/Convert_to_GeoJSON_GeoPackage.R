@@ -20,6 +20,7 @@ library(sf)
 # Step 3: Define file paths
 input_csv <- ".../Alaska_Permafrost_Thaw_Database_v1.0.0-alpha.csv" ## Set file path and change file name to correct version
 output_geojson <- ".../Alaska_Permafrost_Thaw_Database_v1.0.0-alpha.geojson"
+output_geopackage <- "Alaska_Permafrost_Thaw_Database_v2.0.0.gpkg"
 #---------------------------------------------------------------------------------------------
 
 

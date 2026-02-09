@@ -6,9 +6,8 @@ The most recent version, version 2.0.0, of the database includes 19,540 points c
 
 
 ## This repository hosts:
-- **Main Dataset:** `Main_Dataset/[insert version]/CSV/Alaska_Permafrost_Thaw_Database_[insert version].csv` — the main tabular dataset.
-- **Dataset with additional topography data:** `Main_Dataset/[insert version]/CSV/Alaska_Permafrost_Thaw_Database_TopographicVariables_[insert version].csv` - the main tabular dataset with added topography data.
-- **Geospatial Files** `Main_Dataset/[insert version]/Geospatial_Files/Alaska_Permafrost_Thaw_Database_v2.0.0.geojson` and `Main_Dataset/[insert version]/Geospatial_Files/Alaska_Permafrost_Thaw_Database_v2.0.0.gpkg`
+- **Most current version of the main dataset:** `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv` — the main tabular dataset.
+- **Geospatial Files** `Main_Dataset/Alaska_Permafrost_Thaw_Database.geojson` and `Main_Dataset/Alaska_Permafrost_Thaw_Database.gpkg`
 - **R Scripts**
      - `Scripts/Convert_to_GeoJSON_GeoPackage.R` - R script for converting the database from a CSV file to GeoJSON and GeoPackage.
      - `Scripts/GEE_TopographicVariableExtractionScript.js` - Google Earth Engine Script for extracting topographic variables at each thaw feature.
@@ -25,6 +24,7 @@ The most recent version, version 2.0.0, of the database includes 19,540 points c
 | `DOI`                      | `https://doi.org/XXXX/XXXX`                        | Unique identifier from source publication. Put N/A if unpublished                                                        | http://dx.doi.org/10.1007/s10533-013-9862-0
 | `DataSourceType`            | Field/Remote Sensing/Photo-interpretation & publication status                          | Type of source data                                                                                                       | Field - unpublished; Remote Sensing - published
  `FeatureName`              | Name of feature or site                              | The name of the feature. This can include known lakes, monitoring stations, or established field sites.                  | Alaska Peatland Experiment; Eight Mile Lake
+ | `UniqueID`               |     Unique identifier                | Unique identifier for each feature  | 487
 | `Latitude`                 | Decimal Degrees (EPSG:4326)                         | Point location (y coordinate) of thaw event in EPSG:4326                                                                                              | 64.5789232
 | `Longitude`                | Decimal Degrees (EPSG:4326)                         |  Point location (x coordinate) of thaw event in EPSG:4326                                                                                               | -147.5239058
 | `FeatureType`              | As reported by source                               | Types include retrogressive thaw slumps, thermokarst lakes, collapse-scar bog, etc.                                      | Collapse-scar bog; Thermokarst water track
@@ -36,9 +36,8 @@ The most recent version, version 2.0.0, of the database includes 19,540 points c
 
 ---
 ## How to Use
-- Download the Alaska Permafrost Thaw Database as a CSV file. Example: `Main_Dataset/v2.0.0/CSV/Alaska_Permafrost_Thaw_Database_v2.0.0.csv`.
-  - Make sure to select the most recent version of the database.
-- If you want to convert the tabular database to a GeoJSON file for spatial analyses, download the R script: `Scripts/Convert_to_GeoJSON.R` and run on your local computer. 
+- Download the Alaska Permafrost Thaw Database as a CSV file. Example: `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`.
+- If you want to look at older versions of the database, please see the Releases history. 
 - See citation information below
 ---
 
@@ -48,7 +47,7 @@ We welcome contributions of new abrupt or non-abrupt permafrost thaw locations a
 
 1. **Fork this repository** and create a new branch in your fork.
 2. **Add new data** to your own copy of:  
-   `Main_Dataset/[insert version]/CSV/Alaska_Permafrost_Thaw_Database_[insert version].csv`  
+   `Main_Dataset/Alaska_Permafrost_Thaw_Database.csv`  
    - Follow the column structure exactly as outlined in this README.  
    - If you remove or edit existing rows, make a note of that in your pull request.
 3. **Submit a pull request** from your branch to the `main` branch of this repository.

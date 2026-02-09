@@ -1,5 +1,8 @@
 # The Alaska Permafrost Thaw Database (Version 2.0.0)
 
+## Usage
+The data listed in this repository is the most current version. To find old versions of the database, please see the Releases history on the main repository page. 
+
 ## Citation
 
 If you use this dataset, please cite as follows:

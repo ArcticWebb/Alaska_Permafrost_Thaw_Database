@@ -59,7 +59,7 @@ See the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more detailed instructions
 
 ## Citation
 
-Webb, H., Pierce, E., Abbott, B. A., Bowden, W. B., Chen, Y., Chen, Y., Douglas, T. A., Eklof, J. F., Euskirchen, E., Jones, M. C., Langer, M., Myers-Smith, I. H., Overeem, I., Strauss, J., Walter Anthony, K., Wang, K., Whitley, M. A., & Turetsky, M. (2025). The Alaska Permafrost Thaw Database [insert version]. Zenodo. https://doi.org/10.5281/ZENODO.16996415
+Webb, H., Pierce, E., Abbott, B. A., Bowden, W. B., Chen, Y., Chen, Y., Douglas, T. A., Eklof, J. F., Euskirchen, E., Langer, M., Myers-Smith, I. H., Overeem, I., Strauss, J., Walter Anthony, K., Wang, K., Whitley, M. A., & Turetsky, M. (2025). The Alaska Permafrost Thaw Database [insert version]. Zenodo. https://doi.org/10.5281/ZENODO.16996415
 
 ---
 
